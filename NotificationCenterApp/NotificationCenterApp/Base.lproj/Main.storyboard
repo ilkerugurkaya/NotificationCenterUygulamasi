@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NotificationCenterApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hnh-qp-uyj">
+                                <rect key="frame" x="174" y="227" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vqi-tL-43U">
+                                <rect key="frame" x="172" y="386" width="46" height="72"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Git"/>
+                                <connections>
+                                    <segue destination="1wu-Bk-CdE" kind="presentation" id="dhh-ZA-cmQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Vqi-tL-43U" firstAttribute="top" secondItem="hnh-qp-uyj" secondAttribute="bottom" constant="138" id="2LR-pd-MJA"/>
+                            <constraint firstItem="hnh-qp-uyj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="180" id="D8G-iJ-LXW"/>
+                            <constraint firstItem="Vqi-tL-43U" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Pvj-7n-OQv"/>
+                            <constraint firstItem="hnh-qp-uyj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aDC-eb-kIx"/>
+                            <constraint firstItem="Vqi-tL-43U" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bJf-Q8-9ZC"/>
+                            <constraint firstItem="Vqi-tL-43U" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yWn-Lo-x9v"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="labelSonuc" destination="hnh-qp-uyj" id="oad-dU-kwa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.92307692307691" y="3.5545023696682461"/>
+        </scene>
+        <!--View Controller2-->
+        <scene sceneID="vU7-dp-6D6">
+            <objects>
+                <viewController id="1wu-Bk-CdE" customClass="ViewController2" customModule="NotificationCenterApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="r4a-H5-HwW">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8NF-bF-hyb">
+                                <rect key="frame" x="126" y="405" width="140" height="12"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Bildirim gönder"/>
+                                <connections>
+                                    <action selector="bildirimGonder:" destination="1wu-Bk-CdE" eventType="touchUpInside" id="dJX-no-P7w"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uha-Ec-EVs"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uha-Ec-EVs" firstAttribute="trailing" secondItem="8NF-bF-hyb" secondAttribute="trailing" constant="124" id="Ak4-ZB-DFd"/>
+                            <constraint firstItem="8NF-bF-hyb" firstAttribute="top" secondItem="uha-Ec-EVs" secondAttribute="top" constant="358" id="LTk-pu-PXP"/>
+                            <constraint firstItem="8NF-bF-hyb" firstAttribute="leading" secondItem="uha-Ec-EVs" secondAttribute="leading" constant="126" id="qMt-hz-w4j"/>
+                            <constraint firstItem="uha-Ec-EVs" firstAttribute="bottom" secondItem="8NF-bF-hyb" secondAttribute="bottom" constant="370" id="xb4-aj-90P"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="0Qv-f5-GJT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BI2-FU-qa9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1015" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
